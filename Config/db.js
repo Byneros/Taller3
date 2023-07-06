@@ -6,8 +6,8 @@ const conectarbd = async () => {
   try {
     await mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
     console.log('conexion exitosa');
-  } catch (error) {
-    console.log(error)
+  } catch (err) {
+    console.log(err)
   }
 };
 module.exports = conectarbd;
