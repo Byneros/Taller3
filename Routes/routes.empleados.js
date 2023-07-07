@@ -6,6 +6,8 @@ const emplCtrl = require('../controllers/empleado.controller');
 const router = express.Router();
 
 router.get('/',emplCtrl.getEmpleados);
-//router.post('/',emplCtrl.createEmpleado);
+router.post('/',emplCtrl.createEmpleado);
+router.put('/',emplCtrl.putEmpleado);
+router.delete('/',emplCtrl.deleteEmpleado);
 
 module.exports = router;
