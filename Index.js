@@ -1,6 +1,6 @@
 const express = require("express");
-const conectarbd = require("./Config/db");
-const RutaEmpleado =  require("./routes/routes.empleados");
+const conectarbd = require("./Backend/Config/db");
+const RutaEmpleado =  require("./Backend/Routes/routes.empleados");
 const app = express();
 
 app.use(express.json());
