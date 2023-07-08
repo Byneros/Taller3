@@ -2,9 +2,9 @@
 // Importa Express, que es una biblioteca de Node.js utilizada para construir aplicaciones web.
 const express = require('express');
 // Importa un módulo local llamado 'cors', que es un middleware de Express que permite o restringe las solicitudes de origen cruzado.
-const cors = require('./config/cors');
+const cors = require('./Backend/config/cors');
 // Importa la función 'conectarDB' que hemos definido anteriormente para conectar nuestra aplicación a una base de datos MongoDB.
-const conectarDB = require('./config/db');
+const conectarDB = require('./Backend/config/db');
 // Importa las rutas de tareas que hemos definido anteriormente en un router de Express.
 const routesempleados = require('./routes/empleados');
 // Crea una nueva aplicación Express.
