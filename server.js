@@ -19,7 +19,7 @@ app.use(express.json());
 // Añade las rutas de tareas a la aplicación.
 // Cuando alguien haga una solicitud a la ruta raíz ('/') o cualquier ruta que comience con '/', estas solicitudes serán manejadas por 'tareasRoutes'.
 // Usar las rutas de tareas
-app.use('/empleados', routesempleados); 
+app.use('/routes/empleados', routesempleados); 
 // Define el puerto en el que la aplicación va a escuchar las solicitudes.
 // Este puerto se toma del entorno, o si no está disponible, se usa el puerto 5000 por defecto.
 const PORT = process.env.PORT || 3000;
