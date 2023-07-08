@@ -10,8 +10,8 @@ const whitelist = process.env.ORIGINS ? process.env.ORIGINS.split(',') : [];
 const corsOptions = {
 origin: function (origin, callback) {
 // Comprueba si el origen de la solicitud está en la lista blanca de dominios permitidos
-// Si el origen está en la lista blanca o la lista blanca está vacía o se permite cualquier origen ('*'), se permite la solicitud
-solicitud
+// Si el origen está en la lista blanca o la lista blanca está vacía o se permite cualquier origen ('*'), se permite la solicitud 
+console.log(whitelist, origin);
 if (whitelist.length === 0 || whitelist.indexOf(origin) !== -1
 || !origin || whitelist[0] === '*') {
 // Si el origen de la solicitud no está en la lista blanca, se deniega la solicitud con un mensaje de error
