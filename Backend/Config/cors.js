@@ -22,4 +22,4 @@ callback(new Error('Not allowed by CORS'));
 }
 }
 }
-module.exports = cors(corsOptions)
+module.exports = cors(corsOptions);
