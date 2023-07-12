@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const uri = 'mongodb+srv://Byneros:7poJnyCtvZiDVOdS@cluster0.zrp0lem.mongodb.net/?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://Byneros:N4HsT1H3sprnjYcp@cluster0.zrp0lem.mongodb.net/?retryWrites=true&w=majority';
 
 const conectarbd = async () => {
 
@@ -9,7 +9,7 @@ const conectarbd = async () => {
     console.log('Conexión exitosa a MongoDB');
 } catch (err) {
     console.log('Error al conectar a MongoDB: ', err);
-    process.exit(1); // detiene la aplicación en caso de error
+    process.exit(1); 
 }
 };
 
