@@ -1,16 +1,19 @@
-const mongoose = require('mongoose');
-const uri = "mongodb+srv://Byneros:0621@cluster0.nnp3scm.mongodb.net/?retryWrites=true&w=majority";
-const conectarbd = async () => {
 
-  try {
-    await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    
-    console.log('Conexión exitosa a MongoDB');
-} catch (err) {
-    console.log('Error al conectar a MongoDB: ', err);
-    process.exit(1); 
+require('dotenv').config(); 
+const cors = require('cors'); 
+const whitelist = process.env.ORIGINS ? process.env.ORIGINS.split(',') :  [];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+ 
+    if (whitelist.length === 0 || whitelist.indexOf(origin) !== -1
+      || !origin || whitelist[0] === '*') {
+
+      callback(null, true);
+    } else {
+
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }
-};
-
-module.exports = conectarbd;
-
+module.exports = cors(corsOptions);
