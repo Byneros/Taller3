@@ -13,7 +13,7 @@ const tareaSchema = new mongoose.Schema({
     },
     fechaCreacion: {
         type: Date,
-        default: Date.now
+        default: Date.now,
     },
     fechaLimite: {
         type: Date,
