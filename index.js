@@ -8,7 +8,7 @@ const cors = require('cors');
 app.use(express.json());
 var allowedOrigins = ['http://localhost:3005',
                       'http://yourapp.com',
-                    'https://main--glistening-syrniki-e464c6.netlify.app/'];
+                    'https://main--glistening-syrniki-e464c6.netlify.app'];
 app.use(cors({
   origin: function(origin, callback){
     // allow requests with no origin 
