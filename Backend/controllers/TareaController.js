@@ -25,14 +25,13 @@ const obtenerPorId = async (req, res, next) => {
 const crearTarea = async (req, res, next) => {
   try {
     const { nombre, fechaLimite, estado } = req.body;
-    console.log('estoy aca');
-    console.log(req.body);
+   // console.log(req.body);
     const nuevaTarea = new Tarea({
       nombre,
       fechaLimite: fechaLimite,
       estado: estado || 'creada',
     }); 
-    console.log(nuevaTarea);
+    //console.log(nuevaTarea);
     const tareaGuardada = await nuevaTarea.save();
     res.status(201).json(tareaGuardada);
   } catch (err) {
