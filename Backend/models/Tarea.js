@@ -11,9 +11,9 @@ const tareaSchema = new mongoose.Schema({
         required: true,
         maxlength: 150,
     },
-    fechaCreacion: {
-        type: Date,
-        default: Date.now,
+    description: {
+        type: String,
+        maxlength: 150,
     },
     fechaLimite: {
         type: Date,
@@ -28,9 +28,6 @@ const tareaSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Tarea',
     },
-    fechaInicio: Date,
-    fechaFinalizacion: Date,
-    observacion: String
-});
+  });
 
 module.exports = mongoose.model('Tarea', tareaSchema);
